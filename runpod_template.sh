@@ -190,7 +190,7 @@ python -c "
 import torch
 version = torch.__version__
 print(f'PyTorch: {version}')
-if '2.8.0.dev20250317+cu128' in version:
+if '2.8.0.dev20250616+cu128' in version:
     print('✅ Optimizations enabled')
 else:
     print('⚠️  May need PyTorch reinstall')
@@ -235,7 +235,7 @@ def main():
     # Check PyTorch
     version = torch.__version__
     print(f"PyTorch: {version}")
-    if "2.8.0.dev20250317+cu128" in version:
+    if "2.8.0.dev20250616+cu128" in version:
         print("✅ Correct version for optimizations")
     else:
         print("⚠️  Version may not support all optimizations")
