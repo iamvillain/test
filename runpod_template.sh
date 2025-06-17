@@ -59,7 +59,7 @@ mkdir -p models/{diffusion_models,text_encoders,clip_vision,vae,workflows}
 mkdir -p custom_nodes
 
 # CRITICAL: Install exact PyTorch version from guide
-progress "Installing PyTorch 2.8.0.dev20250317+cu128 (Required for optimizations)..."
+progress "Installing PyTorch 2.8.0.dev20250616+cu128 (Required for optimizations)..."
 pip install torch==2.8.0.dev20250616+cu128 torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128 --force-reinstall
 
 # Verify PyTorch installation
@@ -68,7 +68,7 @@ python -c "
 import torch
 version = torch.__version__
 print(f'PyTorch version: {version}')
-if '2.8.0.dev20250317+cu128' in version:
+if '2.8.0.dev20250616+cu128' in version:
     print('✅ Correct PyTorch version for fp16_fast optimization')
 else:
     print('⚠️  PyTorch version may not support all optimizations')
